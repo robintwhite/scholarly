@@ -148,6 +148,10 @@ class _Scholarly:
         url = url + yr_lo + yr_hi + citations + patents + sortby + start
         return self.__nav.search_publications(url)
 
+    def search_pubs_url(self, url):
+        " Given specific URL related to publication search terms, perform scrape"
+        return self.__nav.search_publications(url)
+
     def search_single_pub(self, pub_title: str, filled: bool = False)->PublicationParser:
         """Search by scholar query and return a single Publication container object
         
